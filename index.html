@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Roast My Code 🔥</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <div class="bg-grid"></div>
+
+  <header>
+    <div class="logo">🔥 RoastMyCode</div>
+    <p class="tagline">Paste your code. Brace yourself.</p>
+  </header>
+
+  <main>
+    <div class="editor-panel">
+      <div class="editor-bar">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="file-label">your_masterpiece.js</span>
+      </div>
+      <textarea id="codeInput" placeholder="// Paste your code here...
+// Don't worry, we've seen worse.
+// (Actually, we haven't.)" spellcheck="false"></textarea>
+      <div class="editor-footer">
+        <span id="lineCount">0 lines of questionable decisions</span>
+        <button id="roastBtn" onclick="roastCode()">
+          <span class="btn-icon">🔥</span> Roast It
+        </button>
+      </div>
+    </div>
+
+    <div class="roast-panel" id="roastPanel">
+      <div class="roast-header">
+        <span class="roast-label">💀 Code Review by Roastmaster 3000</span>
+        <button class="copy-btn" id="copyBtn" onclick="copyRoast()" style="display:none">Copy Roast</button>
+      </div>
+      <div class="roast-output" id="roastOutput">
+        <div class="placeholder-msg">
+          <span class="placeholder-icon">👀</span>
+          <p>Your roast will appear here.<br/>If you dare.</p>
+        </div>
+      </div>
+      <div class="roast-score" id="roastScore" style="display:none">
+        <div class="score-item">
+          <span class="score-label">Readability</span>
+          <div class="score-bar"><div class="score-fill" id="readScore"></div></div>
+        </div>
+        <div class="score-item">
+          <span class="score-label">Logic</span>
+          <div class="score-bar"><div class="score-fill" id="logicScore"></div></div>
+        </div>
+        <div class="score-item">
+          <span class="score-label">Will it run?</span>
+          <div class="score-bar"><div class="score-fill" id="runScore"></div></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="toast" id="toast">Roast copied! 🔥</div>
+
+  <footer>
+    <p>Built with 🔥 | No code was harmed in the making of these roasts</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
